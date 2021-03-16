@@ -1,0 +1,17 @@
+$columns = Get-PnPField -List "Fiches référence"
+foreach($column in $columns){
+Write-Host "Column Title  :" $column.Title
+Write-Host "Description   :" $column.Description
+Write-Host "Group Name    :" $column.Group
+Write-Host "Internal Name :" $column.InternalName
+Write-Host "Static Name   :" $column.StaticName
+Write-Host "Scope         :" $column.Scope
+Write-Host "Type          :" $column.TypeDisplayName
+Write-Host "Schema XML    :" $column.SchemaXml
+Write-Host "Is Required?  :" $column.Required
+Write-Host "Is read only? :" $column.ReadOnlyField
+Write-Host "Unique?       :" $column.EnforceUniqueValues
+Write-Host "-------------------------------------------"
+}
+
+credits to this person : https://sharepoint.stackexchange.com/questions/245589/sharepoint-online-powershell-script-to-get-all-field-properties
